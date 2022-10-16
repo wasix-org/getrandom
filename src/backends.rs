@@ -138,7 +138,10 @@ cfg_if! {
         pub use apple_other::*;
     } else if #[cfg(all(target_arch = "wasm32", target_os = "wasi"))] {
         cfg_if! {
-            if #[cfg(target_env = "p1")] {
+            if #[cfg(target_vendor = "wasmer")] {
+                mod wasix;
+                pub use wasix::*;
+            } else if #[cfg(target_env = "p1")] {
                 mod wasi_p1;
                 pub use wasi_p1::*;
             } else {

@@ -1,6 +1,6 @@
 [package]
 name = "getrandom"
-version = "0.4.3"
+version = "0.4.3+wasix.1"
 edition = "2024"
 rust-version = "1.85" # Sync tests.yml and README.md.
 authors = ["The Rand Project Developers"]
@@ -75,6 +75,10 @@ libc = { version = "0.2.154", default-features = false }
 # vxworks
 [target.'cfg(target_os = "vxworks")'.dependencies]
 libc = { version = "0.2.154", default-features = false }
+
+# wasix
+[target.'cfg(all(target_arch = "wasm32", target_os = "wasi", target_vendor = "wasmer"))'.dependencies]
+wasix = "0.13.1"
 
 # wasm_js
 [target.'cfg(all(target_family = "wasm", any(target_os = "unknown", target_os = "none")))'.dependencies]
