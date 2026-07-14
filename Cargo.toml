@@ -1,6 +1,6 @@
 [package]
 name = "getrandom"
-version = "0.2.7" # Also update html_root_url in lib.rs when bumping this
+version = "0.2.7+wasix.1" # Also update html_root_url in lib.rs when bumping this
 edition = "2018"
 authors = ["The Rand Project Developers"]
 license = "MIT OR Apache-2.0"
@@ -24,7 +24,7 @@ libc = { version = "0.2.120", default-features = false }
 wasi = "0.11"
 
 [target.'cfg(target_vendor = "wasmer")'.dependencies]
-wasix = { git = "https://github.com/john-sharratt/wasix.git" }
+wasix = "0.13"
 
 [target.'cfg(all(target_arch = "wasm32", target_os = "unknown"))'.dependencies]
 wasm-bindgen = { version = "0.2.62", default-features = false, optional = true }
