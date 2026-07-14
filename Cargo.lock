@@ -37,7 +37,7 @@ checksum = "74f103f5a97b25e3ed7134dee586e90bbb0496b33ba41816f0e7274e5bb73b50"
 
 [[package]]
 name = "getrandom"
-version = "0.3.3"
+version = "0.3.3+wasix.1"
 dependencies = [
  "cfg-if",
  "compiler_builtins",
@@ -63,9 +63,9 @@ dependencies = [
 
 [[package]]
 name = "libc"
-version = "0.2.171"
+version = "0.2.183+wasix.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c19937216e9d3aa9956d9bb8dfc0b0c8beb6058fc4f7a4dc4d850edf86a237d6"
+checksum = "335b0409c3ef60d048ffb0fba41bac547610d07ade2f5d895eaaae00918ac74e"
 
 [[package]]
 name = "log"
@@ -178,8 +178,9 @@ dependencies = [
 
 [[package]]
 name = "wasix"
-version = "0.13.0"
-source = "git+https://github.com/wasix-org/wasix-abi-rust.git#a7e591622df89c12efe8a311c3f4ebdf17ca3aed"
+version = "0.13.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ae86f02046da16a333a9129d31451423e1657737ecdafed4193838a5f54c5cfe"
 dependencies = [
  "wasi 0.11.1+wasi-snapshot-preview1",
 ]
